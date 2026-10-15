@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katalog Produk UMKM - STIKOM Banyuwangi</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="#" class="logo">E-Katalog UMKM</a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#products">Produk</a></li>
+            <li><a href="#add-product">Tambah Produk</a></li>
+            <li><a href="#about">Tentang</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Section Form Tambah Produk -->
+      <section id="add-product" class="catalog-section">
+        <h2>Tambah Produk Baru</h2>
+        <form id="product-form" class="product-form">
+            <div class="form-group">
+                <label for="product-name">Nama Produk:</label>
+                <input type="text" id="product-name" name="product-name" placeholder="Masukkan nama produk" >
+            </div>
+
+            <div class="form-group">
+                <label for="product-price">Harga (Rp):</label>
+                <input type="number" id="product-price" name="product-price" min="1000" placeholder="Contoh: 350000" >
+            </div>
+
+            <div class="form-group">
+                <label for="product-stock">Stok:</label>
+                <input type="number" id="product-stock" name="product-stock" min="0" placeholder="Contoh: 10" >
+            </div>
+
+            <div class="form-group">
+                <label for="product-category">Kategori:</label>
+                <input type="text" id="product-category" name="product-category" placeholder="Contoh: Elektronik" >
+            </div>
+
+            <button type="submit" class="btn btn-primary">Tambah Produk</button>
+        </form>
+
+      
+      </section>
+
+      <!-- Section Daftar Produk Katalog -->
+      <section id="products" class="catalog-section">
+        <div class="section-header">
+          <h2>Daftar Produk</h2>
+          <p class="subtitle">Data disinkronkan dengan Layanan Backend API</p>
+        </div>
+        <div id="form-feedback" class="feedback-msg"></div>
+        <!-- ID product-grid ditambahkan agar JavaScript bisa merender card produk secara otomatis -->
+        <div class="product-grid" id="product-grid">
+          <!-- Card produk akan otomatis dimuat oleh JavaScript dari file product.js -->
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/js/product.js"></script>
+  </body>
+</html>
